@@ -1,0 +1,96 @@
+{
+    "type": "minecraft:fishing",
+    "pools": [
+        {
+            "bonus_rolls": 0.0,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "quality": 0,
+                    "value": "fishbaiter:fishing/echo_shard/treasure",
+                    "weight": 20,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:time_check",
+                            "value": { "min": 12786, "max": 22300 },
+                            "period": 24000
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "quality": 0,
+                    "value": "fishbaiter:fishing/echo_shard/base",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:time_check",
+                            "value": { "min": 12786, "max": 22300 },
+                            "period": 24000
+                        }
+                    ],
+                    "weight": 30
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "quality": 0,
+                    "value": "fishbaiter:fishing/echo_shard/junk",
+                    "weight": 10,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:any_of",
+                            "terms": [
+                                {
+                                    "condition": "minecraft:time_check",
+                                    "value": {
+                                        "min": 0,
+                                        "max": 12786
+                                    },
+                                    "period": 24000
+                                },
+                                {
+                                    "condition": "minecraft:time_check",
+                                    "value": {
+                                        "min": 22300,
+                                        "max": 24000
+                                    },
+                                    "period": 24000
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "quality": 0,
+                    "value": "minecraft:gameplay/fishing/junk",
+                    "weight": 10,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:any_of",
+                            "terms": [
+                                {
+                                    "condition": "minecraft:time_check",
+                                    "value": {
+                                        "min": 0,
+                                        "max": 12786
+                                    },
+                                    "period": 24000
+                                },
+                                {
+                                    "condition": "minecraft:time_check",
+                                    "value": {
+                                        "min": 22300,
+                                        "max": 24000
+                                    },
+                                    "period": 24000
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1.0
+        }
+    ],
+    "random_sequence": "fishbaiter:fishing/echo_shard"
+}

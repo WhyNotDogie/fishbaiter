@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:fishing",
+    "pools": [
+        {
+            "bonus_rolls": 0.0,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "quality": 0,
+                    "value": "fishbaiter:fishing/meat/fish",
+                    "weight": 10
+                }
+            ],
+            "rolls": 1.0
+        }
+    ],
+    "random_sequence": "fishbaiter:fishing/meat"
+}

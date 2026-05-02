@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:fishing",
+    "pools": [
+        {
+            "bonus_rolls": 0.0,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "type_specific": {
+                                    "type": "minecraft:fishing_hook",
+                                    "in_open_water": true
+                                }
+                            }
+                        }
+                    ],
+                    "quality": 2,
+                    "value": "fishbaiter:fishing/egap/treasure",
+                    "weight": 10
+                }
+            ],
+            "rolls": 1.0
+        }
+    ],
+    "random_sequence": "fishbaiter:fishing/egap"
+}

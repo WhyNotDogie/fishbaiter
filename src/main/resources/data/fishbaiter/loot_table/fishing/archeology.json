@@ -1,0 +1,77 @@
+{
+    "type": "minecraft:fishing",
+    "pools": [
+        {
+            "bonus_rolls": 0.0,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "quality": -1,
+                    "value": "fishbaiter:fishing/archeology/junk",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "type_specific": {
+                                    "type": "minecraft:fishing_hook",
+                                    "in_open_water": true
+                                }
+                            }
+                        },
+                        {
+                            "condition": "minecraft:location_check",
+                            "predicate": {
+                                "biomes": [
+                                    "minecraft:cold_ocean",
+                                    "minecraft:deep_cold_ocean",
+                                    "minecraft:deep_frozen_ocean",
+                                    "minecraft:frozen_ocean",
+                                    "minecraft:deep_ocean"
+                                ]
+                            }
+                        }
+                    ],
+                    "quality": 1,
+                    "value": "fishbaiter:fishing/archeology/archeology_cold",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "type_specific": {
+                                    "type": "minecraft:fishing_hook",
+                                    "in_open_water": true
+                                }
+                            }
+                        },
+                        {
+                            "condition": "minecraft:location_check",
+                            "predicate": {
+                                "biomes": [
+                                    "minecraft:ocean",
+                                    "minecraft:warm_ocean",
+                                    "minecraft:lukewarm_ocean",
+                                    "minecraft:deep_lukewarm_ocean"
+                                ]
+                            }
+                        }
+                    ],
+                    "quality": 1,
+                    "value": "fishbaiter:fishing/archeology/archeology_warm",
+                    "weight": 10
+                }
+            ],
+            "rolls": 1.0
+        }
+    ],
+    "random_sequence": "fishbaiter:fishing/archeology"
+}

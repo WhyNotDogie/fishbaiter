@@ -1,0 +1,86 @@
+{
+    "type": "minecraft:fishing",
+    "pools": [
+        {
+            "bonus_rolls": 0.0,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:sculk_sensor",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:candle",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 15.0,
+                                "min": 1.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:amethyst_shard",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 3.0,
+                                "min": 1.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:experience_bottle",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:enchant_with_levels",
+                            "levels": {
+                                "type": "minecraft:uniform",
+                                "max": 39.0,
+                                "min": 20.0
+                            },
+                            "options": "#minecraft:on_random_loot"
+                        }
+                    ],
+                    "name": "minecraft:iron_leggings",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": 1.0,
+                            "function": "minecraft:set_count"
+                        },
+                        {
+                            "function": "minecraft:set_potion",
+                            "id": "minecraft:strong_regeneration"
+                        }
+                    ],
+                    "name": "minecraft:potion",
+                    "weight": 10
+                }
+            ],
+            "rolls": 1.0
+        }
+    ],
+    "random_sequence": "fishbaiter:fishing/echo_shard/base"
+}

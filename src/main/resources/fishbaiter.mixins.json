@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.dogie.fishbaiter.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "FishingHookMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
