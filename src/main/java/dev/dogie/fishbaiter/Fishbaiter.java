@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import dev.dogie.fishbaiter.data.BaitComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -51,6 +52,11 @@ public class Fishbaiter {
 
     // thank you gigaherz for this better code then i originally had
     public static boolean hasBait(Player playerIn) {
+        ItemStack ohstack = playerIn.getItemBySlot(EquipmentSlot.OFFHAND);
+        if (ohstack.has(FishDataComponents.BAIT_COMPONENT))
+        {
+            return true;
+        }
         Inventory inv = playerIn.getInventory();
         for (int i = 0; i < inv.getContainerSize(); i++)
         {
@@ -63,6 +69,11 @@ public class Fishbaiter {
         return false;
     }
     public static ItemStack getBait(Player playerIn) {
+        ItemStack ohstack = playerIn.getItemBySlot(EquipmentSlot.OFFHAND);
+        if (ohstack.has(FishDataComponents.BAIT_COMPONENT))
+        {
+            return ohstack;
+        }
         Inventory inv = playerIn.getInventory();
         for (int i = 0; i < inv.getContainerSize(); i++)
         {
@@ -78,6 +89,14 @@ public class Fishbaiter {
     // again thanks gigaherz
     public static void useBait(Player playerIn)
     {
+        ItemStack ohstack = playerIn.getItemBySlot(EquipmentSlot.OFFHAND);
+        if (ohstack.has(FishDataComponents.BAIT_COMPONENT))
+        {
+            ohstack.grow(-1);
+            if (ohstack.getCount() <= 0)
+                playerIn.setItemSlot(EquipmentSlot.OFFHAND, ItemStack.EMPTY);
+            return;
+        }
         Inventory inv = playerIn.getInventory();
         for (int i = 0; i < inv.getContainerSize(); i++)
         {
