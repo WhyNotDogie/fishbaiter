@@ -206,12 +206,12 @@ public class Fishbaiter {
         event.modify(Items.GOLDEN_APPLE, builder ->
                 builder.set(FishDataComponents.BAIT_COMPONENT.get(), new BaitComponent("fishbaiter:fishing/legendary_luckier", Optional.of((205 << 16) | (185 << 8) | 40), Optional.of("Legendary")))
         );
-        event.modify(Items.PRISMARINE_SHARD, builder ->
-                builder.set(FishDataComponents.BAIT_COMPONENT.get(), new BaitComponent("fishbaiter:fishing/archeology", Optional.of((205 << 16) | (185 << 8) | 40), Optional.of("Legendary")))
-        );
-        event.modify(Items.NAUTILUS_SHELL, builder ->
-                builder.set(FishDataComponents.BAIT_COMPONENT.get(), new BaitComponent("fishbaiter:fishing/archeology", Optional.of((205 << 16) | (185 << 8) | 40), Optional.of("Legendary")))
-        );
+//        event.modify(Items.PRISMARINE_SHARD, builder ->
+//                builder.set(FishDataComponents.BAIT_COMPONENT.get(), new BaitComponent("fishbaiter:fishing/archeology", Optional.of((205 << 16) | (185 << 8) | 40), Optional.of("Legendary")))
+//        );
+//        event.modify(Items.NAUTILUS_SHELL, builder ->
+//                builder.set(FishDataComponents.BAIT_COMPONENT.get(), new BaitComponent("fishbaiter:fishing/archeology", Optional.of((205 << 16) | (185 << 8) | 40), Optional.of("Legendary")))
+//        );
         event.modify(Items.CAKE, builder ->
                 builder.set(FishDataComponents.BAIT_COMPONENT.get(), new BaitComponent("fishbaiter:fishing/cake", Optional.of((135 << 16) | (25 << 8) | 190), Optional.of("Epic")))
         );
